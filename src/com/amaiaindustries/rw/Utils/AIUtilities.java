@@ -9,7 +9,6 @@ public class AIUtilities {
 	}
 
 	public static String byteToString(byte inByte) {
-		byte[] b = {inByte};
-		return new String(b);
+		return new String(new byte[]{inByte});
 	}
 }

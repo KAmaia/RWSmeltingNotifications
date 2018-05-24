@@ -5,6 +5,7 @@ import net.risingworld.api.*;
 import net.risingworld.api.events.*;
 import net.risingworld.api.events.player.*;
 import net.risingworld.api.events.player.world.*;
+import net.risingworld.api.objects.*;
 
 
 /**
@@ -34,6 +35,15 @@ public class RWPluginTest extends Plugin implements Listener {
 		}
 	}
 
+	@EventMethod(Threading.Sync)
+	public void onPlayerObjectInteractionEvent(PlayerObjectInteractionEvent event) {
+		Player p = event.getPlayer();
+		String s = "Hello";
+		if (event.getObjectDefinition().isFurnace()) {
+			//check to see if we're activating the furnace
+			p.sendTextMessage(AIUtilities.byteToString(event.getObjectStatus()));
+		}
+	}
 
 	@java.lang.Override
 	public void onDisable() {

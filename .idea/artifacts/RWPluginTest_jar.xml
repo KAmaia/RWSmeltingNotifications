@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RWPluginTest:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/RWPluginTest_jar</output-path>
+    <root id="archive" name="RWPluginTest.jar">
+      <element id="module-output" name="RWPluginTest" />
+    </root>
+  </artifact>
+</component>

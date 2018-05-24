@@ -1,0 +1,4 @@
+name: MyPlugin
+main: com.amaiaindustries.rw.test.RWPluginTest
+version: 0.0.0
+author: 3vilPCDiva

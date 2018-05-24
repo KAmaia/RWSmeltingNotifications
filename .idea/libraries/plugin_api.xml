@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="plugin-api">
+    <CLASSES>
+      <root url="jar://D:/SteamLibrary/steamapps/common/RisingWorld/data/jiw/plugin-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -3,13 +3,14 @@ package com.amaiaindustries.rw.test;
 import net.risingworld.api.*;
 import net.risingworld.api.events.*;
 import net.risingworld.api.events.player.*;
-import net.risingworld.api.events.player.world.*;
 import net.risingworld.api.objects.*;
 import net.risingworld.api.utils.*;
 
 
 /**
  * @author Krystal Amaia
+ * This project is free to use for any non-commercial purpose.  For commercial use please contact the author to
+ * negotiate further licensing terms.
  */
 
 
@@ -20,23 +21,6 @@ public class RWPluginTest extends Plugin implements Listener {
 		System.out.println("Hello from Amaia Industries");
 	}
 
-	//This method commented out to be saved for a future release.
-	/*@EventMethod(Threading.Sync)
-	public void onPlayerHitEvent(PlayerDamageEvent phe){
-		System.out.println("Hit for: " + AIUtilities.convertShortToString(phe.getDamage()) + " damage");
-		phe.getPlayer().sendTextMessage("You Have Been Hit And Taken: "
-			                                   + phe.getDamage()
-			                                   + " Damage.");
-		phe.getPlayer().sendTextMessage("You now have: " + phe.getPlayer().getHealth() + " Health remaining.");
-	}*/
-	@EventMethod(Threading.Sync)
-	public void onPlayerChangeObjectStatusEvent(PlayerChangeObjectStatusEvent event) {
-		Player p = event.getPlayer();
-		String name = event.getObjectDefinition().getName();
-		if (name == "bacon") {
-			p.sendTextMessage("Ding Fries Are Done!");
-		}
-	}
 	@EventMethod(Threading.Sync)
 	public void onPlayerObjectInteractionEvent(PlayerObjectInteractionEvent event) {
 		Player p = event.getPlayer();

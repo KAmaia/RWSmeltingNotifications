@@ -7,4 +7,9 @@ public class AIUtilities {
 	public static String convertShortToString(Short s){
 		return s.toString();
 	}
+
+	public static String byteToString(byte inByte) {
+		byte[] b = {inByte};
+		return new String(b);
+	}
 }

@@ -1,10 +1,10 @@
 package com.amaiaindustries.rw.test;
 
 import com.amaiaindustries.rw.Utils.*;
-
 import net.risingworld.api.*;
 import net.risingworld.api.events.*;
 import net.risingworld.api.events.player.*;
+import net.risingworld.api.events.player.world.*;
 
 
 /**
@@ -26,6 +26,15 @@ public class RWPluginTest extends Plugin implements Listener {
 			                                   + " Damage.");
 		phe.getPlayer().sendTextMessage("You now have: " + phe.getPlayer().getHealth() + " Health remaining.");
 	}
+
+	@EventMethod(Threading.Sync)
+	public void onPlayerObjectEvent(PlayerObjectEvent event) {
+		if (event.getObjectDefinition().isFurnace()) {
+			event.getPlayer().sendTextMessage("Status: " + AIUtilities.byteToString(event.getObjectStatus()));
+		}
+	}
+
+
 	@java.lang.Override
 	public void onDisable() {
 

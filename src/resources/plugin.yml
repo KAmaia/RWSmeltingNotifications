@@ -1,4 +1,4 @@
-name: MyPlugin
-main: com.amaiaindustries.rw.test.RWPluginTest
-version: 0.0.0
+name: AIRWSmeltingNotifier
+main: com.amaiaindustries.rw.SmeltingNotifier.SmeltingNotifier
+version: 1.1.0a
 author: 3vilPCDiva

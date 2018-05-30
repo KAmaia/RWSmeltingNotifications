@@ -1,4 +1,4 @@
-package com.amaiaindustries.rw.test;
+package com.amaiaindustries.rw.SmeltingNotifier;
 
 import net.risingworld.api.*;
 import net.risingworld.api.events.*;
@@ -14,7 +14,7 @@ import net.risingworld.api.utils.*;
  */
 
 
-public class RWPluginTest extends Plugin implements Listener {
+public class SmeltingNotifier extends Plugin implements Listener {
 	@java.lang.Override
 	public void onEnable() {
 		registerEventListener(this);

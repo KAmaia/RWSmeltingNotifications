@@ -15,9 +15,12 @@ import net.risingworld.api.utils.*;
 
 
 public class SmeltingNotifier extends Plugin implements Listener {
+	private SoundInformation dingSound;
 	@java.lang.Override
 	public void onEnable() {
 		registerEventListener(this);
+		System.out.println("Loading Ding Sound.");
+		dingSound = new SoundInformation(this, "/assets/sounds/ding.ogg");
 		System.out.println("Hello from Amaia Industries");
 	}
 	@EventMethod(Threading.Sync)
@@ -28,8 +31,7 @@ public class SmeltingNotifier extends Plugin implements Listener {
 		if (event.getObjectDefinition().isFurnace()) {
 			Timer t = new Timer(360, 0, 1, () -> {
 				p.sendTextMessage("[#FF0000]Your Ore Is Now Done!");
-				SoundInformation si = new SoundInformation(this, "/assets/sounds/ding.ogg");
-				p.playSound(si);
+				p.playSound(dingSound);
 			});
 
 			if (b == 0x00 && b1 == 0x01) {
